@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Fearlessly';
+    src: url('font/Fearlessly-Regular.woff2') format('woff2'),
+        url('font/Fearlessly-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fearlessly';
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text-container{
+    width: 70%;
+    max-height: 200px;
+    font-size : 100%;
+} 
+
+#quote{
+    text-align: center;
+    font-size: 3.5vh;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(41, 41, 41), 0 0 0.2em rgb(46, 46, 46);
+}
