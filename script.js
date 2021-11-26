@@ -15,6 +15,7 @@ if (window.screen.width >= 1024) {
 
 var img = new Image();
 img.src = `https://picsum.photos/${width}/${height}`;
+img.crossOrigin = "Anonymous"
 
 // create canvas with the image as a background and add the caption from using the API
 var canvas = document.getElementById("canvas");
@@ -106,12 +107,19 @@ function drawImageScaled(img, ctx) {
 }
 
 
-window.addEventListener('load', function () {
-  let imgConv = document.createElement('img')
-  imgConv.crossOrigin = 'Anonymous'
-imgConv.style.display = 'none'
-document.body.appendChild(imgConv)
-  let canvas = this.document.getElementById('canvas')
-  const dataURI = canvas.toDataURL('image/jpeg')
-  imgConv.src = dataURI
-})
+function save(){
+
+if(window.navigator.msSaveBlob){
+  window.navigator.msSaveBlob(canvas.msToBlob(), 'image.png')
+}else {
+  let a = document.createElement('a')
+  document.body.appendChild(a)
+  a.href = canvas.toDataURL()
+  a.download = 'Wallpaper.png'
+  a.click()
+  document.body.removeChild(a)
+}
+}
+
+
+
