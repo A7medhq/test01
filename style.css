@@ -23,17 +23,41 @@ html,body{
     height: 100%;
     margin: 0;
     object-fit: cover;
-    z-index: -1;
 }
 
-#button {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-}
 
-#btn{
+.btn-container{
 position: absolute;
-right: 20px;
 bottom: 20px;
+width: 100%;
+display: flex;
+justify-content: center;
 }
+
+
+.btn {
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin: 10px 10px 0px 10px;
+  }
+
+  #home-btn, #re-btn{
+    background: #B96A6A;
+  }
+  #home-btn:hover, #re-btn:hover{
+    background: #a75d5d;
+  }
+
+
+  #download-btn{
+    background: #1fc974;
+  }
+  #download-btn:hover{
+    background: #1ca862;
+  }
